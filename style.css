@@ -1,0 +1,263 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: white;
+}
+
+body {
+    font-family: 'Recursive', sans-serif;
+    background-color: #101011;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.itens_navegacao {
+    padding: 5px;
+    color: #fff;
+    transition: 0.75s;
+}
+
+.itens_navegacao:hover {
+    text-decoration: solid;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.menu_informacoes {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('./img/fundo1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+
+.menu_caixinha_texto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 28px;
+}
+
+.menu_caixinha_botao:hover {
+    border: 20px;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.titulos {
+    background-image: url(./img/fundo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    background-attachment: fixed;
+}
+
+.titulo_principal {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.caixa_maior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+
+.caixa_menor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.575);
+    padding: 30px;
+}
+
+.titulo_interno {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.texto_interno {
+    text-align: center;
+    line-height: 3;
+    font-size: 18px;
+}
+
+.botao_interno {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+}
+
+.sobre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-image: url("./img/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    font-weight: bold;
+    text-shadow: 3px 4px 5px #000000;
+    background-attachment: fixed;
+}
+
+.caixa_maior2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.caixa_menor2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+
+.titulo_sobre {
+    font-size: 30px;
+}
+
+
+
+.footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-small;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 33px;
+}
+
+
+.logo-rmnk {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 60px;
+    z-index: 1000;
+    border: 3px solid #f4eeee;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #101011;
+}
+
+.menu-toggle {
+    display: none;
+    
+}
+
+.menu-icon {
+    
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 16px;
+    justify-content: space-between;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+.menu-icon span {
+    background: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: #333;
+    background: transparent;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 0;  /* Certifique-se de que o menu está atrás do ícone */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle:checked ~ .menu {
+    transform: translateX(0);
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

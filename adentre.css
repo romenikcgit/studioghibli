@@ -1,0 +1,76 @@
+/* reset.css */
+
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* adentre.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    padding: 10px;
+}
+
+.imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px; /* Bordas arredondadas, opcional */
+}
+
+.imagens img:hover {
+    transform: scale(1.1);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80vw; /* Defina o tamanho máximo para manter a imagem responsiva */
+    max-height: 80vh;
+    border-radius: 10px;
+    filter: none; /* Remove o filtro de desfoque aplicado ao restante da tela */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
